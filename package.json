@@ -1,0 +1,50 @@
+{
+  "name": "parley",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --webpack",
+    "build": "prisma generate && next build --webpack",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "vitest run",
+    "db:setup": "node scripts/db-setup.mjs",
+    "db:generate": "prisma generate",
+    "test:e2e": "node scripts/e2e.mjs",
+    "check": "npm run typecheck && npm run lint && npm test && npm run build",
+    "postinstall": "prisma generate",
+    "format": "prettier --write src tests scripts *.ts *.mts *.mjs *.md docs/verification",
+    "format:check": "prettier --check src tests scripts *.ts *.mts *.mjs *.md docs/verification"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.0",
+    "next": "16.3.8",
+    "openai": "^7.27.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.8",
+    "prettier": "^3.9.9",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vitest": "^4.1.11",
+    "prisma": "^6.19.0"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "overrides": {
+    "@prisma/config": {
+      "effect": "^3.20.0",
+      "deepmerge-ts": "^8.0.0"
+    }
+  }
+}

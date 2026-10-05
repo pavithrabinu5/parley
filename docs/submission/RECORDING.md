@@ -1,0 +1,20 @@
+# Record a clear 2:40 demo
+
+Use a browser window at a readable size. On macOS, press **Shift–Command–5**, choose **Record Selected Portion**, select the browser area, and enable your microphone in Options. Keep account credentials, developer settings, and environment files outside the recording. Keep environment and authorship labels visible.
+
+Record the actual application. Do not substitute slides or mockups for the working flow. Narrate the exact observed outcome; if it remains pending, say so. A previously verified action can be demonstrated by opening its persisted result and activity history—do not resend it for the video.
+
+| Time      | Show                                                | Say                                                                                                                                                                                                 |
+| --------- | --------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0:00–0:20 | Parley workspace                                    | “A buyer reports a damaged item. For a small merchant, the next step means understanding the evidence and deciding how to respond. Parley brings that work into one reviewable case.”               |
+| 0:20–0:45 | Actual sandbox case and evidence                    | “This is a PayPal sandbox dispute. Parley imports the buyer's messages and item description with their sources. Buyer statements remain claims, not independently verified facts.”                  |
+| 0:45–1:10 | A saved real AI analysis, clearly labelled          | “A local model proposes a next step and identifies missing evidence. It has no payment tools. Its wording can be imperfect, so the merchant reviews the source record and can replace the message.” |
+| 1:10–1:35 | Message editor and policy checks                    | “The exact response is visible. A merchant edit receives its own label and needs fresh approval. The checks still enforce the case state and PayPal's available actions.”                           |
+| 1:35–2:00 | Approval, execution, or the persisted actual result | “Approval and submission are separate. Parley checks the current case again, reserves a single action, then reads PayPal back. Here is the actual recorded outcome.”                                |
+| 2:00–2:20 | Activity log and PayPal conversation                | “This history links the reviewed decision to the provider response. A sent message is not a completed refund or a resolved dispute.”                                                                |
+| 2:20–2:35 | Clearly labelled demo high-value case               | “This separate simulated example shows a high-value unauthorized case blocked for specialist review.”                                                                                               |
+| 2:35–2:40 | Workspace                                           | “Parley: evidence before action. AI assists; the merchant decides.”                                                                                                                                 |
+
+If the sandbox record now displays a merchant draft rather than its earlier AI version, do not call it AI-generated. Show the real analysis before replacing it during a future fresh-case recording, or explain the existing merchant revision and use the Activity history. Never reset a submitted case to stage a repeat execution.
+
+Upload the completed recording to YouTube as **Public**, title it **Parley — PayPal AI Hackathon Demo**, and copy its link into Devpost. Confirm the video is less than three minutes and plays while signed out. Suggested description: “Parley is an AI-assisted PayPal sandbox dispute workspace with evidence review, merchant policy checks, explicit approval, and provider reconciliation. Demo and sandbox states are labelled in the application.”

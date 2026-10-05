@@ -1,0 +1,103 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model MerchantPolicy {
+  id        String   @id @default("merchant")
+  version   Int      @default(1)
+  rules     String
+  updatedAt DateTime @updatedAt
+}
+
+model DisputeCase {
+  id           String   @id
+  mode         String
+  snapshot     String
+  fingerprint  String
+  status       String   @default("NEW")
+  revision     Int      @default(1)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  recommendations Recommendation[]
+  runs         AgentRun[]
+  action       PayPalAction?
+  audit        AuditEvent[]
+  @@index([mode, updatedAt])
+}
+
+model AgentRun {
+  id        String   @id @default(cuid())
+  caseId    String
+  dispute   DisputeCase @relation(fields: [caseId], references: [id])
+  provider  String
+  status    String
+  createdAt DateTime @default(now())
+  endedAt   DateTime?
+}
+
+model Recommendation {
+  id            String   @id @default(cuid())
+  caseId        String
+  dispute       DisputeCase @relation(fields: [caseId], references: [id])
+  fingerprint   String
+  policyVersion Int
+  payload       String
+  checks        String
+  provider      String
+  status        String   @default("PENDING")
+  createdAt     DateTime @default(now())
+  approval      Approval?
+  action        PayPalAction?
+  @@index([caseId, createdAt])
+}
+
+model Approval {
+  id               String @id @default(cuid())
+  recommendationId String @unique
+  recommendation   Recommendation @relation(fields: [recommendationId], references: [id])
+  decision         String
+  actor            String
+  createdAt        DateTime @default(now())
+}
+
+model PayPalAction {
+  id               String @id
+  caseId           String @unique
+  dispute          DisputeCase @relation(fields: [caseId], references: [id])
+  recommendationId String @unique
+  recommendation   Recommendation @relation(fields: [recommendationId], references: [id])
+  requestBody      String
+  state            String
+  httpStatus       Int?
+  debugId          String?
+  outcome          String?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
+
+model WebhookEvent {
+  id         String   @id
+  caseId     String
+  eventType  String
+  state      String
+  attempts   Int      @default(1)
+  leaseUntil DateTime
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model AuditEvent {
+  id        String   @id @default(cuid())
+  caseId    String?
+  dispute   DisputeCase? @relation(fields: [caseId], references: [id])
+  actor     String
+  kind      String
+  detail    String
+  createdAt DateTime @default(now())
+  @@index([caseId, createdAt])
+}
