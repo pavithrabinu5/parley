@@ -1,19 +1,19 @@
 # Submit Parley
 
+Public source: [pavithrabinu5/parley](https://github.com/pavithrabinu5/parley). Published 5 October 2026 with source, MIT license, setup instructions, tests, and submission materials.
+
 ## What remains
 
 1. Finish the approved seller-message rehearsal in Parley and record the result. The sandbox buyer has replied; the prepared merchant message passes every policy check. Sending still requires merchant approval.
-2. Publish the source as a **public GitHub repository**, including `LICENSE` and the complete setup instructions. Never upload `.env`, local databases, `artifacts/`, or `node_modules/`.
+2. Use **https://github.com/pavithrabinu5/parley** as the public source repository in your submission. Publishing is complete.
 3. Record the working application and upload a **public YouTube video under three minutes**. Use [the recording script](docs/submission/RECORDING.md).
 4. Open the [PayPal AI Hackathon](https://paypalaihackathon.devpost.com/), join if needed, and create a submission. Paste [the project description](docs/submission/DEVPOST.md), the GitHub URL, and the YouTube URL. Confirm your eligibility, team details, and tool usage, then submit and check for confirmation.
 
 The [official rules](https://paypalaihackathon.devpost.com/rules), checked 4 October 2026, accept complete local setup instructions instead of paid hosting. The deadline is **12 November 2026 at noon PST**, which is midnight at the start of 13 November in Dubai. Submission is free.
 
-## Fast GitHub publishing
+## Published repository
 
-Create an empty public repository named `parley` in your GitHub account. Extract the prepared `parley-source.zip`, then upload the **contents of the extracted folder**, not the zip itself. Preserve the `src`, `prisma`, `scripts`, `tests`, and `docs` folders and the root configuration files. For a folder upload, GitHub Desktop is convenient: add the extracted folder as a repository, make its first commit, then publish it with the private option unchecked.
-
-The public README should display the project name, run commands, MIT license, and links to the submission and verification documents. Open the repository while signed out to confirm it is public. Add the final video URL to the repository description or README when available.
+The source is published on the `main` branch at [pavithrabinu5/parley](https://github.com/pavithrabinu5/parley). The repository includes the MIT license and complete local setup instructions. Credentials, databases, private test artifacts, dependencies, and local agent configuration were excluded. Add the final YouTube demo URL when available.
 
 ## Judge access
 

@@ -48,6 +48,6 @@ The repository had no commits at audit time, so no committed history existed to 
 1. PayPal credentials, the inquiry, and no-credit local Ollama inference are configured. The buyer has replied and the prepared merchant message passes policy checks. In-app approval, sending, and read-back remain pending merchant approval. No OpenAI credits are required.
 2. A registered sandbox webhook ID and reachable HTTPS endpoint are needed to test genuine signed event delivery.
 3. Record a real supported action, preserve its PayPal debug ID and read-back outcome, and corroborate it in the sandbox Resolution Center. Never call an acknowledged or simulated action verified.
-4. Public repository publishing, video upload, entrant eligibility confirmation, and Devpost submission remain external steps. No deployment or publication was performed.
+4. Source was published on 5 October 2026 to the public repository https://github.com/pavithrabinu5/parley with an MIT license. Video upload, entrant eligibility confirmation, and Devpost submission remain. No hosted deployment was performed.
 
 The locally runnable prototype and fallback are verified. A successful real PayPal + AI golden demo is **not yet verified**.

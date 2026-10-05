@@ -85,7 +85,7 @@ Reviewed organizer-listed sponsors: AG Grid, APIMatic, Astropods, Bryntum, Chann
 - [x] Import the real sandbox dispute and subsequent buyer reply.
 - [ ] Complete the approved in-app seller send and read-back rehearsal.
 - [ ] Record the successful real action and provider verification evidence.
-- [ ] Publish public GitHub repository (not yet authorized/configured here).
+- [x] Publish public GitHub repository: [pavithrabinu5/parley](https://github.com/pavithrabinu5/parley).
 - [ ] Record/upload public YouTube video; enter its link.
 - [ ] Confirm entrant eligibility and submit the Devpost form before the deadline.
 
